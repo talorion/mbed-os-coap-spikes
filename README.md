@@ -27,7 +27,13 @@ after that install the plugins
 vim +PluginInstall +qall
 ~~~
 
-## software
+## ctags
+
+~~~
+brew install ctags
+alias ctags="`brew --prefix`/bin/ctags"
+alias ctags >> ~/.bashrc
+~~~
 
 # credits
 
