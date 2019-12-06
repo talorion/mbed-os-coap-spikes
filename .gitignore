@@ -46,3 +46,7 @@ _deps
 
 # ctags
 tags
+
+# binaries
+mbed-os-coap-client/mbed-os-coap-client
+
