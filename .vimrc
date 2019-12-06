@@ -53,13 +53,20 @@ set list listchars=tab:»·,trail:·
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
 
-" map <F5> for NERDTreeToggle
-map <silent> <F5> : NERDTreeToggle<CR>
+" map <F2> for NERDTreeToggle
+map <silent> <F2> : NERDTreeToggle<CR>
 
-" map <F12> for GoToDefinition 
+" map <F7> for make
+" ! mark prevents Vim from jumping to location of first error found
+nnoremap <silent> <F7> : make!<CR>
+
+" map <F5> for make
+nnoremap <F5> :!./mbed-os-coap-client/mbed-os-coap-client<cr>
+
+" map <F12> for GoToDefinition
 map <silent> <F12> : :YcmCompleter GoToDefinition<CR>
 
-" map <F12> for GoToDefinition 
+" map <F12> for GoToDefinition
 map <silent> <F12> : :YcmCompleter GoToDefinition<CR>
 
 

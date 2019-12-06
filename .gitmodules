@@ -1,0 +1,12 @@
+[submodule "mbed-coap"]
+	path = mbed-coap
+	url = https://github.com/ARMmbed/mbed-coap.git
+[submodule "nanostack-libservice"]
+	path = nanostack-libservice
+	url = https://github.com/ARMmbed/nanostack-libservice.git
+[submodule "mbed-trace"]
+	path = mbed-trace
+	url = https://github.com/ARMmbed/mbed-trace.git
+[submodule "mbed-client-randlib"]
+	path = mbed-client-randlib
+	url = https://github.com/ARMmbed/mbed-client-randlib.git

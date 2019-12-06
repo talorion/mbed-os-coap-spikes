@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.10 FATAL_ERROR)
 
 project(
     mbed-os-coap-spikes
-    LANGUAGES CXX
+    LANGUAGES C CXX
     )
 
 #########################################
@@ -28,6 +28,30 @@ add_compile_options(
 )
 
 #########################################
+## global include dirs
+include_directories(
+    mbed-coap # make mbed-coap global
+    nanostack-libservice/mbed-client-libservice
+    mbed-trace
+    mbed-client-randlib/mbed-client-randlib
+)
+
+#########################################
+## add mbed coap as static library
+file(
+    GLOB
+    mbed-coap.src "mbed-coap/source/*.c"
+)
+add_library(
+    mbed-coap
+    STATIC
+    ${mbed-coap.src}
+)
+target_include_directories(
+    mbed-coap
+    PUBLIC
+    mbed-coap/source/include
+)
 
 #########################################
 ## SubProjects
