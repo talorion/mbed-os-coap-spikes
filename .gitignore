@@ -50,3 +50,5 @@ tags
 # binaries
 mbed-os-coap-client/mbed-os-coap-client
 
+# vim
+.vim
