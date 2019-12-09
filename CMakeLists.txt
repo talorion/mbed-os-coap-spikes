@@ -30,17 +30,18 @@ add_compile_options(
 #########################################
 ## global include dirs
 include_directories(
-    mbed-coap # make mbed-coap global
-    nanostack-libservice/mbed-client-libservice
-    mbed-trace
-    mbed-client-randlib/mbed-client-randlib
+    mbed-os/features/frameworks/
+    mbed-os/features/frameworks/mbed-coap # make mbed-coap global
+    mbed-os/features/frameworks/nanostack-libservice/mbed-client-libservice
+    mbed-os/features/frameworks/mbed-trace
+    mbed-os/features/frameworks/mbed-client-randlib/mbed-client-randlib
 )
 
 #########################################
 ## add mbed coap as static library
 file(
     GLOB
-    mbed-coap.src "mbed-coap/source/*.c"
+    mbed-coap.src "mbed-os/features/frameworks/mbed-coap/source/*.c"
 )
 add_library(
     mbed-coap
@@ -50,7 +51,7 @@ add_library(
 target_include_directories(
     mbed-coap
     PUBLIC
-    mbed-coap/source/include
+    mbed-os/features/frameworks/mbed-coap/source/include
 )
 
 #########################################
