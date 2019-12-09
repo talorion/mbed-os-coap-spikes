@@ -50,7 +50,7 @@ cd .vim/bundle/YouCompleteMe
 
 # IDE Features
 
-start with
+start in root dir of repository with
 ~~~
 vim .
 ~~~
@@ -59,15 +59,10 @@ vim .
 * <kbd>F2</kbd> open Filesystem (NERDTreeToggle)
 * <kbd>F4</kbd> toggle header source
 * <kbd>F5</kbd> run Programm
-* <kbd>F7</kbd>  Build (make)
+* <kbd>F7</kbd> Build (make)
 * <kbd>F12</kbd>  GoToDefinition
-
-## TODO
-
-* <kbd>CTRL</kbd>+<kbd>ALT</kbd>+<kbd>T</kbd> run all tests(ctest)
-* <kbd>CTRL</kbd>+<kbd>S</kbd>+ save current file
-* <kbd>CTRL</kbd>+<kbd>SHIFT</kbd>+<kbd>S</kbd> save all files
-
+* <kbd>LEADER</kbd>+<kbd>S</kbd>+ save all files
+* <kbd>LEADER</kbd>+<kbd>T</kbd> run all tests(ctest)
 
 # license
 

@@ -117,7 +117,7 @@ nnoremap <silent> <F2> : NERDTreeToggle<CR>
 nnoremap <silent> <F4> : call CurtineIncSw()<CR>
 
 " map <F5> for make
-nnoremap <F5> :!./mbed-os-coap-client/mbed-os-coap-client<cr>
+nnoremap <silent> <F5> :!./mbed-os-coap-client/mbed-os-coap-client<cr>
 
 " map <F7> for make
 " ! mark prevents Vim from jumping to location of first error found
@@ -127,9 +127,11 @@ nnoremap <silent> <F7> : make!<CR>
 nnoremap <silent> <F12> :YcmCompleter GoToDefinition<CR>
 
 " nnoremap <C-s> :w
+noremap <Leader>s :wa<CR>
 
 " nnoremap <C-S> :wa
-
+" noremap <Leader>s :wa<CR>
+nnoremap <silent> <Leader>t :!ctest<CR>
 
 " run ctags when c/c++ file is saved
 function! DelTagOfFile(file)
