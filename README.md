@@ -6,6 +6,20 @@
 
 # requirements
 
+## prerequisites
+
+mac os
+~~~
+brew install cmake macvim ctags
+alias ctags="`brew --prefix`/bin/ctags"
+alias ctags >> ~/.bashrc
+~~~
+
+ubuntu
+~~~
+sudo apt install build-essential cmake python3-dev exuberant-ctags
+~~~
+
 ## vim basic setup
 
 put following lines in ~/.vimrc
@@ -25,17 +39,8 @@ vim +PluginInstall +qall
 
 build youcompleteme
 ~~~
-brew install cmake macvim
 cd .vim/bundle/YouCompleteMe
 ./install.py --clang-completer
-~~~
-
-## ctags
-
-~~~
-brew install ctags
-alias ctags="`brew --prefix`/bin/ctags"
-alias ctags >> ~/.bashrc
 ~~~
 
 # IDE Features
@@ -45,12 +50,19 @@ start with
 vim .
 ~~~
 
-<F2> open Filesystem (NERDTreeToggle)
-<F5> run Programm
-<F7> Build (make)
-<F12> GoToDefinition
+* automatic generate tags when saving a c/c++ file
+* <F2> open Filesystem (NERDTreeToggle)
+* <F5> run Programm
+* <F7> Build (make)
+* <F12> GoToDefinition
 
-# credits
+## TODO
+
+* <F4> toggle header source
+* <C-M-t> run all tests(ctest)
+* <Ctrl>+s save current file
+* <Ctrl>+<Shift>+s save all files
+
 
 # license
 

@@ -118,7 +118,11 @@ nnoremap <silent> <F7> : make!<CR>
 nnoremap <F5> :!./mbed-os-coap-client/mbed-os-coap-client<cr>
 
 " map <F12> for GoToDefinition
-map <silent> <F12> : :YcmCompleter GoToDefinition<CR>
+nnoremap <silent> <F12> :YcmCompleter GoToDefinition<CR>
+
+" nnoremap <C-s> :w
+
+" nnoremap <C-S> :wa
 
 " nnoremap <F4> :CtrlPTag<cr>
 " nnoremap <F4> <C-]> %:p:s,.h$,.X123X,:s,.cpp$,.h,:s,.X123X$,.cpp,<CR>
