@@ -32,6 +32,11 @@ set secure
 
 ## vim plugins
 
+download vundle
+~~~
+git clone https://github.com/VundleVim/Vundle.vim.git .vim/bundle/Vundle.vim
+~~~
+
 install the plugins
 ~~~
 vim +PluginInstall +qall
@@ -51,17 +56,17 @@ vim .
 ~~~
 
 * automatic generate tags when saving a c/c++ file
-* <F2> open Filesystem (NERDTreeToggle)
-* <F5> run Programm
-* <F7> Build (make)
-* <F12> GoToDefinition
+* <kbd>F2</kbd> open Filesystem (NERDTreeToggle)
+* <kbd>F4</kbd> toggle header source
+* <kbd>F5</kbd> run Programm
+* <kbd>F7</kbd>  Build (make)
+* <kbd>F12</kbd>  GoToDefinition
 
 ## TODO
 
-* <F4> toggle header source
-* <C-M-t> run all tests(ctest)
-* <Ctrl>+s save current file
-* <Ctrl>+<Shift>+s save all files
+* <kbd>CTRL</kbd>+<kbd>ALT</kbd>+<kbd>T</kbd> run all tests(ctest)
+* <kbd>CTRL</kbd>+<kbd>S</kbd>+ save current file
+* <kbd>CTRL</kbd>+<kbd>SHIFT</kbd>+<kbd>S</kbd> save all files
 
 
 # license

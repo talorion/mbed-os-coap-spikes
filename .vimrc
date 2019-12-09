@@ -37,6 +37,9 @@ Plugin 'scrooloose/nerdtree'
 " Full path fuzzy file buffer, mru, tag, ... finder for vim
  Plugin 'ctrlpvim/ctrlp.vim'
 
+"Easily toggle between *.c* and *.h* buffers.
+Plugin 'ericcurtin/CurtineIncSw.vim'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -108,14 +111,17 @@ set list listchars=tab:»·,trail:·
 set backspace=indent,eol,start
 
 " map <F2> for NERDTreeToggle
-map <silent> <F2> : NERDTreeToggle<CR>
+nnoremap <silent> <F2> : NERDTreeToggle<CR>
+
+" map <F4> for toggle heder source
+nnoremap <silent> <F4> : call CurtineIncSw()<CR>
+
+" map <F5> for make
+nnoremap <F5> :!./mbed-os-coap-client/mbed-os-coap-client<cr>
 
 " map <F7> for make
 " ! mark prevents Vim from jumping to location of first error found
 nnoremap <silent> <F7> : make!<CR>
-
-" map <F5> for make
-nnoremap <F5> :!./mbed-os-coap-client/mbed-os-coap-client<cr>
 
 " map <F12> for GoToDefinition
 nnoremap <silent> <F12> :YcmCompleter GoToDefinition<CR>
@@ -124,10 +130,6 @@ nnoremap <silent> <F12> :YcmCompleter GoToDefinition<CR>
 
 " nnoremap <C-S> :wa
 
-" nnoremap <F4> :CtrlPTag<cr>
-" nnoremap <F4> <C-]> %:p:s,.h$,.X123X,:s,.cpp$,.h,:s,.X123X$,.cpp,<CR>
-" nnoremap <F4> tag: %:p:s,.h$,.X123X,:s,.cpp$,.h,:s,.X123X$,.cpp,<CR>
-":nnoremap <F4>  %:p:s,.h$,.X123X,:s,.cpp$,.h,:s,.X123X$,.cpp,<CR>
 
 " run ctags when c/c++ file is saved
 function! DelTagOfFile(file)
