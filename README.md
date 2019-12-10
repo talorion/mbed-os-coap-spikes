@@ -48,6 +48,28 @@ cd .vim/bundle/YouCompleteMe
 ./install.py --clang-completer
 ~~~
 
+## Generate compilation database when using mbed os
+
+~~~
+mbed export -i cmake_gcc_arm
+~~~
+
+edit file CMakeLists.txt
+~~~
+#########################################
+## generate compile database
+#########################################
+SET(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+
+# uncomment below to have a verbose build process
+SET(CMAKE_VERBOSE_MAKEFILE ON)
+~~~
+
+run cmake
+~~~
+cmake .
+~~~
+
 # IDE Features
 
 start in root dir of repository with
@@ -60,6 +82,7 @@ vim .
 * <kbd>F4</kbd> toggle header source
 * <kbd>F5</kbd> run Programm
 * <kbd>F7</kbd> Build (make)
+* <kbd>F9</kbd> FixIt (YCM FixIt)
 * <kbd>F12</kbd>  GoToDefinition
 * <kbd>LEADER</kbd>+<kbd>S</kbd>+ save all files
 * <kbd>LEADER</kbd>+<kbd>T</kbd> run all tests(ctest)
