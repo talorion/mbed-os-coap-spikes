@@ -97,6 +97,30 @@ fun! <SID>StripTrailingWhitespaces()
 endfun
 autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
 
+" Remove newbie crutches in Command Mode
+cnoremap <Down> <Nop>
+cnoremap <Left> <Nop>
+cnoremap <Right> <Nop>
+cnoremap <Up> <Nop>
+
+" Remove newbie crutches in Insert Mode
+inoremap <Down> <Nop>
+inoremap <Left> <Nop>
+inoremap <Right> <Nop>
+inoremap <Up> <Nop>
+
+" Remove newbie crutches in Normal Mode
+nnoremap <Down> <Nop>
+nnoremap <Left> <Nop>
+nnoremap <Right> <Nop>
+nnoremap <Up> <Nop>
+
+" Remove newbie crutches in Visual Mode
+vnoremap <Down> <Nop>
+vnoremap <Left> <Nop>
+vnoremap <Right> <Nop>
+vnoremap <Up> <Nop>
+
 " highlight column number 110 with color.
 set colorcolumn=110
 highlight ColorColumn ctermbg=darkgray
@@ -122,6 +146,9 @@ nnoremap <silent> <F5> :!./mbed-os-coap-client/mbed-os-coap-client<cr>
 " map <F7> for make
 " ! mark prevents Vim from jumping to location of first error found
 nnoremap <silent> <F7> : make!<CR>
+
+" map <F9> for Apply YCM FixIt
+map <F9> :YcmCompleter FixIt<CR>
 
 " map <F12> for GoToDefinition
 nnoremap <silent> <F12> :YcmCompleter GoToDefinition<CR>
