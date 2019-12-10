@@ -64,6 +64,12 @@ vim .
 * <kbd>LEADER</kbd>+<kbd>S</kbd>+ save all files
 * <kbd>LEADER</kbd>+<kbd>T</kbd> run all tests(ctest)
 
+# TODO
+
+* Debug local
+* Debug embedded
+* Toggle comment
+
 # license
 
 [Apache-2.0](https://www.apache.org/licenses/LICENSE-2.0.txt)
