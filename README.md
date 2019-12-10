@@ -50,12 +50,25 @@ cd .vim/bundle/YouCompleteMe
 
 ## Generate compilation database when using mbed os
 
+# Generate compilation database
+
 ~~~
 mbed export -i cmake_gcc_arm
 ~~~
 
 edit file CMakeLists.txt
 ~~~
+# force cmake compilers
+SET(CMAKE_ASM_COMPILER    "/opt/gcc-arm-none-eabi-9-2019-q4-major/bin/arm-none-eabi-gcc")
+SET(CMAKE_C_COMPILER      "/opt/gcc-arm-none-eabi-9-2019-q4-major/bin/arm-none-eabi-gcc")
+SET(CMAKE_CXX_COMPILER    "/opt/gcc-arm-none-eabi-9-2019-q4-major/bin/arm-none-eabi-g++")
+SET(ELF2BIN               "/opt/gcc-arm-none-eabi-9-2019-q4-major/bin/arm-none-eabi-objcopy")
+include_directories(
+BEFORE
+SYSTEM
+/opt/gcc-arm-none-eabi-9-2019-q4-major/arm-none-eabi/include
+)
+
 #########################################
 ## generate compile database
 #########################################
