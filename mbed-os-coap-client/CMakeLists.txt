@@ -12,3 +12,7 @@ add_executable(
     main.cpp
     )
 
+if(COMPILE_TESTS)
+    add_subdirectory(UNITTESTS)
+endif(COMPILE_TESTS)
+

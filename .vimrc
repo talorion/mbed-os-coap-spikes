@@ -158,7 +158,7 @@ noremap <Leader>s :wa<CR>
 
 " nnoremap <C-S> :wa
 " noremap <Leader>s :wa<CR>
-nnoremap <silent> <Leader>t :!ctest<CR>
+nnoremap <silent> <Leader>t :!ctest --output-on-failure<CR>
 
 nnoremap <Tab> :tabn<cr>
 

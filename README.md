@@ -101,6 +101,25 @@ vim .
 * <kbd>LEADER</kbd>+<kbd>T</kbd> run all tests(ctest)
 * <kbd>TAB</kbd> next Tab
 
+# TESTING
+
+all test must be located under ls mbed-os-coap-client/UNITTESTS/<testgroup>/<testname>
+and contain following files
+test_<testname>.cpp
+unittest.cmake
+
+prepare tests
+~~~
+cmake -DCOMPILE_TESTS=ON .
+~~~
+
+run test
+~~~
+<kbd>LEADER</kbd>+<kbd>T</kbd> in IDE
+or
+ctest outside the IDE
+~~~
+
 # TODO
 
 * Debug local
