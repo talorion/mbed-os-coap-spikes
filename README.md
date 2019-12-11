@@ -99,6 +99,7 @@ vim .
 * <kbd>F12</kbd>  GoToDefinition
 * <kbd>LEADER</kbd>+<kbd>S</kbd>+ save all files
 * <kbd>LEADER</kbd>+<kbd>T</kbd> run all tests(ctest)
+* <kbd>TAB</kbd> next Tab
 
 # TODO
 

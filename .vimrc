@@ -160,6 +160,8 @@ noremap <Leader>s :wa<CR>
 " noremap <Leader>s :wa<CR>
 nnoremap <silent> <Leader>t :!ctest<CR>
 
+nnoremap <Tab> :tabn<cr>
+
 " run ctags when c/c++ file is saved
 function! DelTagOfFile(file)
     let fullpath = a:file
