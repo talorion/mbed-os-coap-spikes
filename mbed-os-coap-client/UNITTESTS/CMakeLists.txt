@@ -14,12 +14,13 @@ if(DEFINED ENV{CPPUTEST_HOME})
 else()
     pkg_search_module(CPPUTEST REQUIRED cpputest>=3.8)
     message(STATUS "Found CppUTest version ${CPPUTEST_VERSION}")
+    message(STATUS "Using CppUTest home: $ENV{CPPUTEST_HOME}")
 endif()
 
 #Specify directories in which the linker will look for libraries.
-link_directories(
-    ${CPPUTEST_LIBRARIES}
-)
+#link_directories(
+#${CPPUTEST_LIBRARIES}
+#)
 
 #include_directories(
 #    ${CPPUTEST_INCLUDE_DIRS}
@@ -31,6 +32,9 @@ link_directories(
 
 set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -DUNITTEST")
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -DUNITTEST")
+SET(CMAKE_C_FLAGS "${CMAKE_C_FLAGS}" )
+SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Weffc++")
+SET(CMAKE_ASM_FLAGS "${CMAKE_ASM_FLAGS}" )
 
 # Set include dirs.
 set(unittest-includes-base
@@ -75,7 +79,7 @@ foreach(testfile ${unittest-file-list})
 
     set(TEST_SUITES ${TEST_SUITES} ${TEST_SUITE_NAME})
 
-    set(LIBS_TO_BE_LINKED ${CPPUTEST_LDFLAGS})
+    #set(LIBS_TO_BE_LINKED ${CPPUTEST_LDFLAGS})
 
     # Build directories list
     set(BUILD_DIRECTORIES)
@@ -94,11 +98,17 @@ foreach(testfile ${unittest-file-list})
     if (unittest-test-sources)
         # Create the executable.
         add_executable(${TEST_SUITE_NAME}.out ${unittest-test-sources})
+        #target_include_directories(${TEST_SUITE_NAME}.out
+        #SYSTEM
+        #PUBLIC
+        #BEFORE
+        #${CPPUTEST_LDFLAGS}
+        #)
         target_include_directories(${TEST_SUITE_NAME}.out PRIVATE
         ${unittest-includes})
 
         # Link the executable with the libraries.
-        target_link_libraries(${TEST_SUITE_NAME}.out ${LIBS_TO_BE_LINKED})
+        target_link_libraries(${TEST_SUITE_NAME}.out ${LIBS_TO_BE_LINKED} ${CPPUTEST_LDFLAGS})
 
         #Specify directories in which the linker will look for libraries.
         #target_link_directories(

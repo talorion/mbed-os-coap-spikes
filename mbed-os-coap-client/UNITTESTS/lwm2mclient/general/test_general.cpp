@@ -3,13 +3,13 @@
 
 TEST_GROUP(Example)
 {
-        void setup()
-                {
-                        }
+    void setup()
+    {
+    }
 
-            void teardown()
-                    {
-                            }
+    void teardown()
+    {
+    }
 };
 
 TEST(Example, test1)

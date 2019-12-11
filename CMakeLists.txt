@@ -19,6 +19,8 @@ find_package(PkgConfig REQUIRED)
 #########################################
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
+# uncomment below to have a verbose build process
+SET(CMAKE_VERBOSE_MAKEFILE ON)
 
 #########################################
 ## Global compiler settings
@@ -32,6 +34,7 @@ add_compile_options(
     -Wshadow
     -Wstrict-aliasing
     -Werror
+    -Wno-error=keyword-macro
 )
 
 set(CMAKE_C_STANDARD 11)
