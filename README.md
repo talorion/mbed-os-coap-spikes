@@ -126,6 +126,11 @@ ctest outside the IDE
 * Debug embedded
 * Toggle comment
 
+# credits
+
+https://os.mbed.com/teams/sandbox/code/simple-mbed-client-example/
+https://os.mbed.com/teams/sandbox/code/simple-mbed-client/
+
 # license
 
 [Apache-2.0](https://www.apache.org/licenses/LICENSE-2.0.txt)
