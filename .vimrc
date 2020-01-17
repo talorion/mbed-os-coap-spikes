@@ -40,6 +40,9 @@ Plugin 'scrooloose/nerdtree'
 "Easily toggle between *.c* and *.h* buffers.
 Plugin 'ericcurtin/CurtineIncSw.vim'
 
+" Comment functions so powerful—no comment necessary.
+Plugin 'scrooloose/nerdcommenter'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -87,6 +90,9 @@ set tabstop=4
 set shiftwidth=4
 set softtabstop=4
 set expandtab
+
+" highlight all occurrence of a search
+set hlsearch
 
 " Strip trailing whitespaces on each save
 fun! <SID>StripTrailingWhitespaces()
@@ -151,7 +157,7 @@ nnoremap <silent> <F7> : make!<CR>
 map <F9> :YcmCompleter FixIt<CR>
 
 " map <F12> for GoToDefinition
-nnoremap <silent> <F12> :YcmCompleter GoToDefinition<CR>
+nnoremap <silent> <F12> :YcmCompleter GoTo<CR>
 
 " nnoremap <C-s> :w
 noremap <Leader>s :wa<CR>
